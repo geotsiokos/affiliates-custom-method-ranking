@@ -57,23 +57,23 @@ class ACM {
 			);
 			$rates = get_option( 'aff_ent_tier_rates', array() );
 			if ( $total_referrals <= 10 ) {
-				$rates[0] = 0.0066;
-				$result = '0.06';
+				$rates[0] = 0.06; // @todo swap these
+				$result = '0.0066';
 			} else if ( 10 < $total_referrals <= 100 ) {
-				$rates[0] = 0.013;
-				$result = '0.055';
+				$rates[0] = 0.055;
+				$result = '0.013';
 			} else if ( 100 < $total_referrals <= 500 ) {
-				$rates[0] = 0.0196;
-				$result = '0.05';
+				$rates[0] = 0.05;
+				$result = '0.0196';
 			} else if ( 500 < $total_referrals <= 1500 ) {
-				$rates[0] = 0.026;
-				$result = '0.045';
+				$rates[0] = 0.045;
+				$result = '0.026';
 			} else if ( 1500 < $total_referrals <= 5000 ) {
-				$rates[0] = 0.0326;
-				$result = '0.04';
+				$rates[0] = 0.04;
+				$result = '0.0326';
 			} else {
-				$rates[0] = 0.0066;
-				$result = '0.06';
+				$rates[0] = 0.06;
+				$result = '0.0066';
 			}
 			update_option( 'aff_ent_tier_rates', $rates );
 		} else {
